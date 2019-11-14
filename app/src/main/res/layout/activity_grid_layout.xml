@@ -21,6 +21,7 @@
 
         <!-- First Row -->
         <Button
+            android:id="@+id/btnSeven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -29,6 +30,7 @@
             android:text="7" />
 
         <Button
+            android:id="@+id/btnEight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -37,6 +39,7 @@
             android:text="8" />
 
         <Button
+            android:id="@+id/btnNine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -45,6 +48,7 @@
             android:text="9" />
 
         <Button
+            android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -54,6 +58,7 @@
 
         <!-- Second Row -->
         <Button
+            android:id="@+id/btnFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -62,6 +67,7 @@
             android:text="4" />
 
         <Button
+            android:id="@+id/btnFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -70,6 +76,7 @@
             android:text="5" />
 
         <Button
+            android:id="@+id/btnSix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -78,6 +85,7 @@
             android:text="6" />
 
         <Button
+            android:id="@+id/btnSubtract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -87,6 +95,7 @@
 
         <!-- Third Row -->
         <Button
+            android:id="@+id/btnOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -96,6 +105,7 @@
             android:text="1" />
 
         <Button
+            android:id="@+id/btnTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -104,6 +114,7 @@
             android:text="2" />
 
         <Button
+            android:id="@+id/btnThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -112,6 +123,7 @@
             android:text="3" />
 
         <Button
+            android:id="@+id/btnMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -121,15 +133,17 @@
 
         <!-- Fourth Row -->
         <Button
+            android:id="@+id/btnDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:textSize="50dp"
-            android:text="-" />
+            android:text="/" />
 
         <Button
+            android:id="@+id/btnZero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -138,6 +152,7 @@
             android:text="0" />
 
         <Button
+            android:id="@+id/btnRemainder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -146,6 +161,7 @@
             android:text="%" />
 
         <Button
+            android:id="@+id/btnEvaluate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"

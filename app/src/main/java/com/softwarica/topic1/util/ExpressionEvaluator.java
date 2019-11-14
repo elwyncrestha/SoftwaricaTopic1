@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/**
+ * @author Elvin Shrestha on 14/11/19
+ */
 public class ExpressionEvaluator {
 
     private static Stack<Character> operatorStack = new Stack<>();

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.softwarica.topic1.R;
+import com.softwarica.topic1.util.ExpressionEvaluator;
 
 public class GridLayoutActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -114,7 +115,8 @@ public class GridLayoutActivity extends AppCompatActivity implements View.OnClic
                 this.expression.append("%");
                 break;
             case R.id.btnEvaluate:
-                // do smth
+                String result = ExpressionEvaluator.evaluate(this.expression.toString());
+                this.expression.delete(0, this.expression.length()).append(result);
                 break;
             case R.id.btnErase:
                 if (this.expression.length() <= 0) {

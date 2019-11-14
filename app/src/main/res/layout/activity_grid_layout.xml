@@ -5,18 +5,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textAlignment="viewEnd"
-        android:textSize="50dp"/>
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="viewEnd"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/btnErase"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Erase" />
+    </LinearLayout>
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:columnCount="4"
         android:rowCount="4"
+        android:layout_weight="1"
         tools:context=".activity.GridLayoutActivity">
 
         <!-- First Row -->

@@ -17,6 +17,7 @@
             android:layout_weight="1"
             android:text="0"
             android:textAlignment="viewEnd"
+            android:enabled="false"
             android:textSize="50dp" />
 
         <Button

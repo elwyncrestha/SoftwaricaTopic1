@@ -115,6 +115,10 @@ public class GridLayoutActivity extends AppCompatActivity implements View.OnClic
                 this.expression.append("%");
                 break;
             case R.id.btnEvaluate:
+                if (this.expression.toString().contains(".")) {
+                    this.etResult.setError("Cannot evaluate floating point numbers!!!");
+                    return;
+                }
                 String result = ExpressionEvaluator.evaluate(this.expression.toString());
                 this.expression.delete(0, this.expression.length()).append(result);
                 break;

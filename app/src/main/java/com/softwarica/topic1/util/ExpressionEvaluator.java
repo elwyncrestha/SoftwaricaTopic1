@@ -20,9 +20,11 @@ public class ExpressionEvaluator {
 
     public static String evaluate(String expression) {
         int nextChar = 0;
+        double oldOperand = 0;
         while (nextChar < expression.length()) {
             char ch = expression.charAt(nextChar);
             if (operatorMap.containsKey(ch)) {
+                oldOperand = 0;
                 if (operatorStack.isEmpty()) {
                     operatorStack.push(ch);
                     nextChar++;
@@ -42,16 +44,23 @@ public class ExpressionEvaluator {
                     }
                 }
             } else if (ch == '(') {
+                oldOperand = 0;
                 operatorStack.push(ch);
                 nextChar++;
             } else if (ch == ')') {
+                oldOperand = 0;
                 while (operatorStack.peek() != '(')
                     popOperatePush();
 
                 operatorStack.pop();
                 nextChar++;
             } else {
-                operandStack.push(Double.parseDouble(String.valueOf(ch)));
+                if (oldOperand != 0) {
+                    operandStack.push(operandStack.pop() * 10 + Double.parseDouble(String.valueOf(ch)));
+                } else {
+                    operandStack.push(Double.parseDouble(String.valueOf(ch)));
+                }
+                oldOperand = operandStack.peek();
                 nextChar++;
             }
         }
@@ -59,7 +68,7 @@ public class ExpressionEvaluator {
         while (operatorStack.size() != 0)
             popOperatePush();
 
-        return String.valueOf(operandStack.peek());
+        return String.valueOf((int)Math.floor(operandStack.peek()));
     }
 
     private static void popOperatePush() {

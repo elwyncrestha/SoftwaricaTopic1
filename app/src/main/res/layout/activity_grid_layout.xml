@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activity.GridLayoutActivity">
 
     <LinearLayout
+        android:id="@+id/llResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -28,12 +30,12 @@
     </LinearLayout>
 
     <GridLayout
+        android:id="@+id/glOperators"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="4"
         android:rowCount="4"
-        android:layout_weight="1"
-        tools:context=".activity.GridLayoutActivity">
+        android:layout_weight="1">
 
         <!-- First Row -->
         <Button
